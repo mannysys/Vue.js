@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VUE</title>
+     <script src="./vue.js" charset="utf-8"></script>
+</head>
+<body>
+    
+    <div id="app">
+        <!-- 
+            使用指令绑定参数src，绑定属性imageSrc
+            v-bind简写冒号: 就行了
+          -->
+        <img 
+            :src="imageSrc"
+            :style="{width: imageWith}">
+    </div>
+
+     <script src="./index.js" charset="utf-8"></script>
+</body>
+</html>

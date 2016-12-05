@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue</title>
+    <script src="./vue.js" charset="utf-8"></script>
+</head>
+<body>
+
+    <div id="app">
+        <!--<div v-show="welcome" v-bind:title="title">
+            {{ message }}
+        </div>
+        <button v-on:click="logMessage">按钮</button>
+        <input v-model="message">-->
+        <ol>    
+            <!--循环数据
+            <li v-for="comment in comments">
+                {{ comment.content}}
+            </li>
+            -->
+            <comment 
+                v-for="comment in comments"
+                v-bind:comment="comment"></comment>
+        </ol>
+    </div>
+
+    <script src="./index.js" charset="utf-8"></script>
+</body>
+</html>

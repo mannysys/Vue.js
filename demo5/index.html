@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VUE</title>
+    <link rel="stylesheet" href="./semantic.min.css">
+    <script src="./vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="ui container">
+            <div class="ui hidden divider"></div>
+            
+            <!--
+                v-if指令如果是true就显示否则就显示v-else指令元素内容
+                v-show指令在元素上添加css样式的隐藏
+
+            -->
+            <div class="ui segment" v-if="loggedIn">
+                <p>{{ message }}</p>
+            </div>
+            <div class="ui yellow segment" v-else>
+                <p>login please : )</p>
+            </div>
+
+            <!-- 
+                v-for指令是遍历数据
+                index 是数据的索引
+                如果你想包含多个元素的话，使用template包裹起来
+             -->
+            <template v-for="(item, index) in items">
+            <div>
+                {{ index + 1 }}. {{ item.text }}
+            </div>
+            <div class="ui divider"></div>
+            </template>
+        </div>  
+    </div>
+   
+
+     <script src="./index.js" charset="utf-8"></script>
+</body>
+</html>

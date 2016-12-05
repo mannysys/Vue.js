@@ -1,0 +1,1 @@
+browser-sync start --server --no-notify --files='index.html, index.js'
